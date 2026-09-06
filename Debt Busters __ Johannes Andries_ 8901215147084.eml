@@ -1,0 +1,545 @@
+Delivered-To: leroux.johannes@gmail.com
+Received: by 2002:a2e:8a8a:0:b0:3a3:6d09:bab5 with SMTP id 10csp1268451ljj;
+        Fri, 4 Sep 2026 05:44:31 -0700 (PDT)
+X-Received: by 2002:a05:6808:4f6b:b0:4b9:a8ac:485 with SMTP id 5614622812f47-4b9a8bb6ac4mr2755154b6e.35.1788525871480;
+        Fri, 04 Sep 2026 05:44:31 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1788525871; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=DvMenBlOHTWJ3pi3mPl0fUziv2O6PjRugbon9zQ415GPYDNAFjH86IfFuirgzqtA7/
+         EP8OC3BeEjV2jL4Z4O9MAdgp9/p+tIQF3EnkZnPw3SYYG5Ph6WnhGwBE7+5NFbmpOZwa
+         jIE0/V7dfnewSsDm76ImGCmWNXV4AdvzTmMVFOuX7/tcmZ0EHQd7j7oGmXdvbhltJTJM
+         hinfdtPcIaOhtqo61uHAPWhJUYyJhaSE4CS7q+7b/L762Eyb9/SWgNPFK9JZtK8NNPLv
+         7ow10QtEcwhhFIE1+6XY+fOfZCbgBIC3YDzak5SiPj0ht5s8kQJ6n1LCg4qrcJXEZ+iO
+         EweA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=mime-version:content-language:accept-language:message-id:date
+         :return-receipt-to:thread-index:thread-topic:subject:to:from
+         :dkim-signature;
+        bh=qTA+u3V8k0LXO5JfWD+bAj4/k7Pp+hu+i05KHE9ctzM=;
+        fh=PDxOKJ2IA3vB31tHiV5NqnJx54yJRhTsO3crYUYOly8=;
+        b=gqKuE+FMbcbjTm8D91LxkClcuHDMtptJ2Net89GFG3flTr6wJe9LvjaHNA0Fl8GTcV
+         drOxTONmlrDape/1t4+WK57RA4TCDab10PZyQZckblIxqJcqt0e8qXcv/5HLEY06Zi1/
+         Gl3P5L9miY5JzFjIDFAJoCUfLZ3IR2PcFqPTLFA5gyTlueLtdQQKHJ4L/yMsztoGI2w9
+         kaZaksupQItTLnW1KPNciFYLVxYylr8+BC+qZiPweaZ/86TQK+fdqM3o5NUw2bzQHHcV
+         343ChsR+1l7fLKkB9yrCBjJLftG31bYEBffI7l0rE9quw0jGn6rW/Za7UFrFXm4QCs0X
+         a/Jg==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@vhtlaw.onmicrosoft.com header.s=selector1-vhtlaw-onmicrosoft-com header.b=TK27Aj74;
+       arc=pass (i=1 spf=pass spfdomain=vhtlaw.co.za dkim=pass dkdomain=vhtlaw.co.za dmarc=pass fromdomain=vhtlaw.co.za);
+       spf=none (google.com: admin6@vhtlaw.co.za does not designate permitted sender hosts) smtp.mailfrom=admin6@vhtlaw.co.za;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=vhtlaw.co.za
+Return-Path: <admin6@vhtlaw.co.za>
+Received: from CT2P275CU009.outbound.protection.outlook.com (mail-southafricawestazlp170100000.outbound.protection.outlook.com. [2a01:111:f403:c209::])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-cc455478390si4191467a12.178.2026.09.04.05.44.30
+        for <leroux.johannes@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 04 Sep 2026 05:44:31 -0700 (PDT)
+Received-SPF: none (google.com: admin6@vhtlaw.co.za does not designate permitted sender hosts) client-ip=2a01:111:f403:c209::;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@vhtlaw.onmicrosoft.com header.s=selector1-vhtlaw-onmicrosoft-com header.b=TK27Aj74;
+       arc=pass (i=1 spf=pass spfdomain=vhtlaw.co.za dkim=pass dkdomain=vhtlaw.co.za dmarc=pass fromdomain=vhtlaw.co.za);
+       spf=none (google.com: admin6@vhtlaw.co.za does not designate permitted sender hosts) smtp.mailfrom=admin6@vhtlaw.co.za;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=vhtlaw.co.za
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=QvHMcA8Ve8pGaf8BjqhmMbHOaGlv1JytguegqJ+fycIZCT1iJGBOfxHJH11C3t/1pFjjBrkagZMe7ekbRXXA8Uo6A7tRNKWj4rVVNLQ0IB6YoWTHQ4EckUzbVT2nBUiKBHFXmC/o89WMsj3rGuvSoiY2eGyhBVNmlj3fRa1iCny59LoFTPEbrgIq5fh3TxmHAx13jZv0h8LzQeF1v/+9GFwIPY9wSeYAVDN9erYBhDrNQ9LzG8Ee5IOtPuK5fCas9onmYkZkulFiGPkt6pShXn3LY93pyaynGIPoMW+35Qpy7/zXN5ueLqXUa3hiE/oVGd73v5/39J652nDHABiw6g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=qTA+u3V8k0LXO5JfWD+bAj4/k7Pp+hu+i05KHE9ctzM=;
+ b=B/0Lw2v6Vs1u1A3TF3J8traaFr1Sd4T6UU9tC5a8vgNOLhohBEyUlpdisQDPQYZmzOFT9WgRwHvfk6DoIV48x+vJXYUDeDJHP83M6eT3txaFIJCJToMEAaF5yqnQ8f/PfpvRMa566L7gKNnwhVwqvbySr7tjZSSk3elaOdB3/R8CzXmaJQDcf1WnyG4SQRKYrgeroWxFnzKC8KTm1Jt1jTB7tnOsuT29fo3pxmyGUolErSBmVyOprEjD2je8dOXBeahpOfEfTWaq62+UXSW5RPp+N2ePNuL/G1Qf7ih1iCUt+1G/gu5zilgvoq+BStJIDWQH2ETS4uli+0Z+0k+FBA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=vhtlaw.co.za; dmarc=pass action=none header.from=vhtlaw.co.za;
+ dkim=pass header.d=vhtlaw.co.za; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=vhtlaw.onmicrosoft.com; s=selector1-vhtlaw-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=qTA+u3V8k0LXO5JfWD+bAj4/k7Pp+hu+i05KHE9ctzM=;
+ b=TK27Aj74jZnsegnneAsucgnFV5qnDSXh/hnon329EFVCpAgqAs6q1KXiN4EpBenA7/mr6d32+nrjTiigEJRZJlVKqmB3oYVJ2NQE+1110LRTgC4EYUnqmOCx7Eq7JrIRSU2VrGRoc17ZuhshaYcVhngJmv8o8omKcxJ7WpPj4gg=
+Received: from JN3PPF1A50981CA.ZAFP275.PROD.OUTLOOK.COM (2603:1086:8::148) by
+ JN3P275MB1881.ZAFP275.PROD.OUTLOOK.COM (2603:1086:0:30::5) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.21.360.13; Fri, 4 Sep 2026 12:44:22 +0000
+Received: from JN3PPF1A50981CA.ZAFP275.PROD.OUTLOOK.COM
+ ([fe80::4bb8:9602:e148:75e5]) by JN3PPF1A50981CA.ZAFP275.PROD.OUTLOOK.COM
+ ([fe80::4bb8:9602:e148:75e5%5]) with mapi id 15.21.0360.008; Fri, 4 Sep 2026
+ 12:44:21 +0000
+From: Lyndon Bailey | VHT Attorneys <admin6@vhtlaw.co.za>
+To: "leroux.johannes@gmail.com" <leroux.johannes@gmail.com>
+Subject: Debt Busters // Johannes Andries_  8901215147084
+Thread-Topic: Debt Busters // Johannes Andries_  8901215147084
+Thread-Index: Ad08apYDIyyWuI2eRe28RmewAkz9kw==
+Return-Receipt-To: <admin6@vhtlaw.co.za>
+Date: Fri, 4 Sep 2026 12:44:21 +0000
+Message-ID:
+ <JN3PPF1A50981CAEECAD70C29F042F13A9DA4B52@JN3PPF1A50981CA.ZAFP275.PROD.OUTLOOK.COM>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=vhtlaw.co.za;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: JN3PPF1A50981CA:EE_|JN3P275MB1881:EE_
+x-ms-office365-filtering-correlation-id: 3e59438b-f9db-45f3-88ec-08df0a823e4a
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|1800799024|376014|3109299003|7049299003|366016|23010399003|69100299015|10067099003|56012099006|6133799003|18002099003|8096899003|13003099007|38070700021;
+x-microsoft-antispam-message-info:
+ AmveqO/73CEcjhTPj1Cc94RxDIFeKMaoNOui9nUrjqUw/vV1HsXOpVJgXP0tsmp/I+nH2eFRJEOmQqjmDfkYMtNtyphRD0luPS6YsF7DGec5KWJ67noxyzrTygPXWxCah3LGKMTuZN0ArwFSMmPmf414DPoMBLHllhIxx9k4YXY5szbFEOtI1ztNQutAXXH4mmUykcAWat9mAgpHZr/1mQH1owV0ZP7dsnaQMCY/KWnxhJYms3YNBrY35n1mKqwsdxLQoun3QhdzGqKUkFf5zYj+JIai7oQt4p63nZCq3k1LWGCfSDp43tpiXd0sL19Cn18L9IqgWBW9YNcEZ+Tbj0wnsuClMEyyr5XQ71wOtuR40YSi4jnKaWad+RPOIiW/7fu2KlFhd/lHJyUpU+tsdmb91xCl1hoZsksM6vTrl/lAbFVu8QYgGfIFWpxCO7/r6Qijvtezii6Wv1S9Lw2C67+Ogn7fqZT872EofknMC+YMA5StsULU5I1ueF0H7My+DUFgy1HSXCrSnFwDfJ5Yu/Zmxt5cr9KvU6hu2O5a4vM6HPd0ii1PzFUUHXm3LQsaHl6kuoUsOgsWyR86KvKigcPBHrPgURplz1IQwu86sm021m1AGD1XvAyPPQctBUDuJWbnkmenc3QqAL84cV+QPar1dnY9XqoPm2KhbtGnXfo=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:JN3PPF1A50981CA.ZAFP275.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230040)(1800799024)(376014)(3109299003)(7049299003)(366016)(23010399003)(69100299015)(10067099003)(56012099006)(6133799003)(18002099003)(8096899003)(13003099007)(38070700021);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?us-ascii?Q?jNo1CWL9fihCwQYsWLrUBl4utC7dBF14x/xAB8fcFtdtYzsSjEhE8jWBHKO3?=
+ =?us-ascii?Q?+6HKjmh9vssvZHKgtyBae3oEls3zZusOtUmIWS2QJjzpR9/3SokDLtIwCWa5?=
+ =?us-ascii?Q?uiEFxeOWiPnr24bR1kLbrSt3eSdegBfLeg9W9UfGdLBGBgvoM6VtdgOh1xtg?=
+ =?us-ascii?Q?AKqQVk6/b82HfgHfK6jIVH9RL7sCAiYsPpk2OzrsMma5i6oRJpcpoxr5PQcT?=
+ =?us-ascii?Q?tBVAc6Ss/6r7wNOB215NusmYaqc51jOkupZoxMHtI4xaod+Jsd2zBw7N75tF?=
+ =?us-ascii?Q?C6eZk3qb8SN/t4UGodbQq4V1uSiE3Qz7HbfXPpl3MIdXBWJPzuE8qb4NkuGi?=
+ =?us-ascii?Q?Lk25L9sikfDRem7DF5sG4OEU/eb7F7K2UkhvTHYqodTnpd0xfk2z6X5rVGR/?=
+ =?us-ascii?Q?5ujttOP5J/Lla5uuJbRAMZZLLyH703Dz0vMmS1qKe4oyMReJcUmAYdKOwRmM?=
+ =?us-ascii?Q?RXXlbxOzR9lQhdUTMxNF+oRCiFtmlB4IiN+QNRnY2YFIXEl2SECPET1fvaIn?=
+ =?us-ascii?Q?RtFx25sQ30/kAO/kN6NMgUY5Az1hMszmLI9xCJE1H/M/iyXcrD40y0oCpNBW?=
+ =?us-ascii?Q?eNvyt+5w8hGHkG4M4guiGC9EBzS8d5NzkmWh7uG8go2OI/KnkUg7C0K3wYRG?=
+ =?us-ascii?Q?uoWI0YMHedsfXE+1+OROSNWy0DOY2OxPzVcscKSijUZn08miAU/BlTtRjTzT?=
+ =?us-ascii?Q?Hsb5b438YHkZdv5xePNDlrflZw6+ZzBrhjKNNWLIN6NfdhuO/gAQkD27Wjcq?=
+ =?us-ascii?Q?uS9EncHykjbrY30apYZlyvH2MrUyfXjYMbfnRrOx5i5lgCnyjGGHqCtssCHb?=
+ =?us-ascii?Q?w5rTJQJk/NICPTOaPSIjhWqtqJYNQiP8EK6WAJa5jKTM2DuJhD/qugx4LmQH?=
+ =?us-ascii?Q?vwc0bR2ZjIS4PcfCCcvYLHQJQdbXgHt5WzNRei5/FpabrocKAsqdZh5CqycX?=
+ =?us-ascii?Q?BoROeoxfjpNMorU5uYpVoJCVeKuspZ4dDSTCBKuRU/S000wcdkc155zmaSSD?=
+ =?us-ascii?Q?TSiGYeQkN4m7HLbGF4PzqtuadElB6AiGfF3q29Z3QnrOmvgh2icM0DlDR5cb?=
+ =?us-ascii?Q?l3DAGfk/EplFjorhiUa4ZyEBJVsntOrM7XTMa9REK0YLda1J+pAx4Y283HtO?=
+ =?us-ascii?Q?epxlWEc/se88PFJ7URxqtqoF8EqB2JH23SgERAP+Jvt5DdhGNpVX2Hl8JJpO?=
+ =?us-ascii?Q?nqJ+cR2zXlAzux2PwiOI6GOh/kQM/dyiYlB00G5lDTVy9GLP+WsCbuND+aEI?=
+ =?us-ascii?Q?wXLRXTlT6/FyD1j+W+Qw3zJTpBegyWZLnhMMRDH8vgZ8XjijlMtZ1KD2J1Zn?=
+ =?us-ascii?Q?Hs1XobqE7ih0uKawNh85ZsZdu2MZX8mN25NFWezfbKC2R9vYP8D5ieN8HVhb?=
+ =?us-ascii?Q?LHGH6+5V8Bci4ISA8pT74GfapQeOgvNa+ID9JIovT8sBXR4m5f6k7xTv2jQv?=
+ =?us-ascii?Q?xIPhU1U02Dm0l89vW8u7sd02u6HrsdRnMMx20VpC0uaHl+FND3LIRw4/4Qd/?=
+ =?us-ascii?Q?6Gp7SqmjptoZGkn2dVoodXvUfVP6cGcKrd4RFOVD89zD1Afc39dJ72Cxg1bI?=
+ =?us-ascii?Q?zxtZWeBEFnv2hZm/i/CYpAgRl2wQhr+hu6Qjq22QdD9Vej/ne/3P1JbrUsoR?=
+ =?us-ascii?Q?SkfhC6jht7HLunH/M4P5oJXtDurvFnFWzjDUMj8XY1BRwDgf0FUgzTEgqEpl?=
+ =?us-ascii?Q?ESoxqs37yfeB+dUmW34/m3fWWD/Xr674sHzHUcwE4u7Oh2mk?=
+Content-Type: multipart/alternative;
+	boundary="_000_JN3PPF1A50981CAEECAD70C29F042F13A9DA4B52JN3PPF1A50981CA_"
+MIME-Version: 1.0
+X-OriginatorOrg: vhtlaw.co.za
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: JN3PPF1A50981CA.ZAFP275.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3e59438b-f9db-45f3-88ec-08df0a823e4a
+X-MS-Exchange-CrossTenant-originalarrivaltime: 04 Sep 2026 12:44:21.6805
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 4812779d-98da-4ec3-a3c8-142e483082ae
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: r0dm6BX39j/j6ZwkCTS171NEkxq++k4Tc8OzXWgwI4qfeUK17yScckltBkd3mIZcZ60GxCR4hoCbPS0tQxSlhA==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: JN3P275MB1881
+
+--_000_JN3PPF1A50981CAEECAD70C29F042F13A9DA4B52JN3PPF1A50981CA_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Johannes Andries
+
+I trust that you are well.
+
+I am contacting you from the attorneys of record for Debt Busters as we are=
+ in the process of finalising your debt review application in court.
+
+On the previous court appearance the Magistrate requested an updated proof =
+of income and updated proof of residence in the form of a utility bill, lea=
+se agreement or bank statement.
+
+Providing the above will greatly assist in getting your matter finalised.
+
+Kind regards
+[VHT Attorneys]<http://www.vhtlaw.co.za/>
+Lyndon Bailey Candidate legal practitioner
+Office: 012 880 3103 Email: admin6@vhtlaw.co.za<mailto:admin6@vhtlaw.co.za>
+
+www.vhtlaw.co.za<https://vhtlaw.co.za/>
+Pretoria Office:<https://www.google.com/maps/place/Monument+Office+Park/@-2=
+5.8025309,28.2252415,17z/data=3D!3m1!4b1!4m6!3m5!1s0x1e95610015b2fbf5:0x5d1=
+f16f0e9dcdabd!8m2!3d-25.8025309!4d28.2278164!16s%2Fg%2F11z9r0bq8b?entry=3Dt=
+tu&g_ep=3DEgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D>
+Suite 1-101B<https://www.google.com/maps/place/Monument+Office+Park/@-25.80=
+25309,28.2252415,17z/data=3D!3m1!4b1!4m6!3m5!1s0x1e95610015b2fbf5:0x5d1f16f=
+0e9dcdabd!8m2!3d-25.8025309!4d28.2278164!16s%2Fg%2F11z9r0bq8b?entry=3Dttu&g=
+_ep=3DEgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D>
+Monument Office Park<https://www.google.com/maps/place/Monument+Office+Park=
+/@-25.8025309,28.2252415,17z/data=3D!3m1!4b1!4m6!3m5!1s0x1e95610015b2fbf5:0=
+x5d1f16f0e9dcdabd!8m2!3d-25.8025309!4d28.2278164!16s%2Fg%2F11z9r0bq8b?entry=
+=3Dttu&g_ep=3DEgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D>
+71 Steenbok Avenue<https://www.google.com/maps/place/Monument+Office+Park/@=
+-25.8025309,28.2252415,17z/data=3D!3m1!4b1!4m6!3m5!1s0x1e95610015b2fbf5:0x5=
+d1f16f0e9dcdabd!8m2!3d-25.8025309!4d28.2278164!16s%2Fg%2F11z9r0bq8b?entry=
+=3Dttu&g_ep=3DEgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D>
+Pretoria<https://www.google.com/maps/place/Monument+Office+Park/@-25.802530=
+9,28.2252415,17z/data=3D!3m1!4b1!4m6!3m5!1s0x1e95610015b2fbf5:0x5d1f16f0e9d=
+cdabd!8m2!3d-25.8025309!4d28.2278164!16s%2Fg%2F11z9r0bq8b?entry=3Dttu&g_ep=
+=3DEgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D>
+Cape Town Office:<https://maps.app.goo.gl/KETsZXTRgyr5Z49k8>
+Tygervalley Health Centre,<https://maps.app.goo.gl/KETsZXTRgyr5Z49k8>
+The View, Unit 606, 6th Floor,<https://maps.app.goo.gl/KETsZXTRgyr5Z49k8>
+Bellville, Cape Town<https://maps.app.goo.gl/KETsZXTRgyr5Z49k8>
+
+
+
+
+[linkedin]<https://www.linkedin.com/company/vht-attorneys/>
+[facebook]<https://www.facebook.com/VHTLAW>
+[instagram]<https://www.instagram.com/vht_law/>
+[whatsapp]<https://wa.me/+27128803103>
+DISCLAIMER: This email and any attachments are confidential and may be lega=
+lly privileged. If you are not the intended recipient, please notify the se=
+nder immediately, delete this email, and do not disclose, copy, or act on i=
+ts contents. VHT Attorneys accepts no liability for any loss or damage aris=
+ing from email transmission or viruses. The views expressed are those of th=
+e sender and not necessarily those of VHT Attorneys.IMPORTANT: VHT Attorney=
+s will never change banking details via email. Any notice of amended bankin=
+g details must be independently verified with our office before payment is =
+made.
+
+
+--_000_JN3PPF1A50981CAEECAD70C29F042F13A9DA4B52JN3PPF1A50981CA_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;
+	mso-fareast-language:EN-US;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Aptos",sans-serif;
+	color:windowtext;}
+p.elementtoproof, li.elementtoproof, div.elementtoproof
+	{mso-style-name:elementtoproof;
+	margin:0cm;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-ZA" link=3D"#467886" vlink=3D"#96607D" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal" style=3D"line-height:150%;background:white"><span st=
+yle=3D"font-size:14.0pt;line-height:150%;font-family:&quot;Calibri&quot;,sa=
+ns-serif;color:black">Dear Johannes Andries</span><span style=3D"font-size:=
+14.0pt;line-height:150%;font-family:&quot;Calibri&quot;,sans-serif"><o:p></=
+o:p></span></p>
+<p class=3D"MsoNormal" style=3D"line-height:150%;background:white"><span st=
+yle=3D"font-size:14.0pt;line-height:150%;font-family:&quot;Calibri&quot;,sa=
+ns-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal" style=3D"line-height:150%;background:white"><span st=
+yle=3D"font-size:14.0pt;line-height:150%;font-family:&quot;Calibri&quot;,sa=
+ns-serif;color:black">I trust that you are well.</span><span style=3D"font-=
+size:14.0pt;line-height:150%;font-family:&quot;Calibri&quot;,sans-serif"><o=
+:p></o:p></span></p>
+<p class=3D"elementtoproof" style=3D"mso-margin-top-alt:12.0pt;margin-right=
+:0cm;margin-bottom:12.0pt;margin-left:0cm;line-height:150%;background:white=
+">
+<span style=3D"font-size:14.0pt;line-height:150%;font-family:&quot;Calibri&=
+quot;,sans-serif;color:black">I am contacting you from the attorneys of rec=
+ord for Debt Busters as we are in the process of finalising your debt revie=
+w application in court.</span><span style=3D"font-size:14.0pt;line-height:1=
+50%;font-family:&quot;Calibri&quot;,sans-serif"><o:p></o:p></span></p>
+<p class=3D"elementtoproof" style=3D"mso-margin-top-alt:12.0pt;margin-right=
+:0cm;margin-bottom:12.0pt;margin-left:0cm;line-height:150%;background:white=
+">
+<span style=3D"font-size:14.0pt;line-height:150%;font-family:&quot;Calibri&=
+quot;,sans-serif;color:black">On the previous court appearance the Magistra=
+te requested an updated proof of income and updated proof of residence in t=
+he form of a utility bill, lease agreement or
+ bank statement. </span><span style=3D"font-size:14.0pt;line-height:150%;fo=
+nt-family:&quot;Calibri&quot;,sans-serif"><o:p></o:p></span></p>
+<p class=3D"elementtoproof" style=3D"mso-margin-top-alt:12.0pt;margin-right=
+:0cm;margin-bottom:12.0pt;margin-left:0cm;line-height:150%;background:white=
+">
+<span style=3D"font-size:14.0pt;line-height:150%;font-family:&quot;Calibri&=
+quot;,sans-serif;color:black">Providing the above will greatly assist in ge=
+tting your matter finalised.</span><span style=3D"font-size:14.0pt;line-hei=
+ght:150%;font-family:&quot;Calibri&quot;,sans-serif"><o:p></o:p></span></p>
+<p class=3D"elementtoproof" style=3D"mso-margin-top-alt:12.0pt;margin-right=
+:0cm;margin-bottom:12.0pt;margin-left:0cm;line-height:150%;background:white=
+">
+<span style=3D"font-size:14.0pt;line-height:150%;font-family:&quot;Calibri&=
+quot;,sans-serif;color:black">Kind regards</span><span style=3D"font-size:1=
+4.0pt;line-height:150%;font-family:&quot;Calibri&quot;,sans-serif"><o:p></o=
+:p></span></p>
+<div>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"750" style=3D"width:562.5pt">
+<tbody>
+<tr>
+<td style=3D"padding:7.5pt 11.25pt 7.5pt 7.5pt">
+<p class=3D"MsoNormal"><a href=3D"http://www.vhtlaw.co.za/"><span style=3D"=
+font-family:&quot;Times New Roman&quot;,serif;color:blue;mso-fareast-langua=
+ge:EN-ZA;text-decoration:none"><img border=3D"0" width=3D"95" height=3D"95"=
+ style=3D"width:.9895in;height:.9895in" id=3D"_x0000_i1029" src=3D"http://v=
+htlaw.co.za/wp-content/uploads/2024/04/email-logo-big.png" alt=3D"VHT Attor=
+neys"></span></a><span style=3D"mso-ligatures:none;mso-fareast-language:EN-=
+ZA"><o:p></o:p></span></p>
+</td>
+<td style=3D"padding:7.5pt 15.0pt 7.5pt 0cm">
+<div>
+<p class=3D"MsoNormal"><b><span style=3D"font-family:&quot;Arial&quot;,sans=
+-serif;color:#00778D;mso-ligatures:none;mso-fareast-language:EN-ZA">Lyndon =
+Bailey</span></b><span style=3D"font-family:&quot;Times New Roman&quot;,ser=
+if;color:black;mso-ligatures:none;mso-fareast-language:EN-ZA">&nbsp;</span>=
+<span style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif;col=
+or:#EF5023;mso-ligatures:none;mso-fareast-language:EN-ZA">Candidate</span><=
+span style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif;colo=
+r:#EF5023;mso-ligatures:none;mso-fareast-language:EN-ZA">
+</span><span style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-se=
+rif;color:#EF5023;mso-ligatures:none;mso-fareast-language:EN-ZA">legal prac=
+titioner</span><span style=3D"font-family:&quot;Times New Roman&quot;,serif=
+;color:black;mso-ligatures:none;mso-fareast-language:EN-ZA"><br>
+</span><b><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans=
+-serif;color:#003646;mso-ligatures:none;mso-fareast-language:EN-ZA">Office:=
+</span></b><span style=3D"font-family:&quot;Times New Roman&quot;,serif;col=
+or:black;mso-ligatures:none;mso-fareast-language:EN-ZA">&nbsp;</span><span =
+style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#00=
+3646;mso-ligatures:none;mso-fareast-language:EN-ZA">012</span><span style=
+=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#003646;=
+mso-ligatures:none;mso-fareast-language:EN-ZA">
+</span><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-se=
+rif;color:#003646;mso-ligatures:none;mso-fareast-language:EN-ZA">880 3103</=
+span><span style=3D"font-family:&quot;Times New Roman&quot;,serif;color:bla=
+ck;mso-ligatures:none;mso-fareast-language:EN-ZA">&nbsp;</span><b><span sty=
+le=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#00364=
+6;mso-ligatures:none;mso-fareast-language:EN-ZA">Email:&nbsp;</span></b><sp=
+an style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:=
+#003646;mso-ligatures:none;mso-fareast-language:EN-ZA"><a href=3D"mailto:ad=
+min6@vhtlaw.co.za"><span style=3D"color:#003646;text-decoration:none">admin=
+6@vhtlaw.co.za</span></a></span><span style=3D"font-family:&quot;Times New =
+Roman&quot;,serif;color:black;mso-ligatures:none;mso-fareast-language:EN-ZA=
+"><br>
+<br>
+</span><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-se=
+rif;color:#00778D;mso-ligatures:none;mso-fareast-language:EN-ZA"><a href=3D=
+"https://vhtlaw.co.za/"><b><span style=3D"color:#00778D;text-decoration:non=
+e">www.vhtlaw.co.za</span></b></a></span><span style=3D"mso-ligatures:none;=
+mso-fareast-language:EN-ZA"><o:p></o:p></span></p>
+</div>
+</td>
+<td valign=3D"top" style=3D"padding:13.5pt 0cm 0cm 15.0pt">
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:9.0pt;font-family:&quot;Ari=
+al&quot;,sans-serif;color:#E75225;mso-ligatures:none;mso-fareast-language:E=
+N-ZA"><a href=3D"https://www.google.com/maps/place/Monument+Office+Park/@-2=
+5.8025309,28.2252415,17z/data=3D!3m1!4b1!4m6!3m5!1s0x1e95610015b2fbf5:0x5d1=
+f16f0e9dcdabd!8m2!3d-25.8025309!4d28.2278164!16s%2Fg%2F11z9r0bq8b?entry=3Dt=
+tu&amp;g_ep=3DEgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"><b><span style=3D"color=
+:#E75225;text-decoration:none">Pretoria</span></b><b><span style=3D"color:#=
+E75225;text-decoration:none">
+</span></b><b><span style=3D"color:#E75225;text-decoration:none">Office:</s=
+pan></b></a></span><span style=3D"font-family:&quot;Times New Roman&quot;,s=
+erif;color:#E75225;mso-ligatures:none;mso-fareast-language:EN-ZA"><br>
+</span><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-se=
+rif;color:#E75225;mso-ligatures:none;mso-fareast-language:EN-ZA"><a href=3D=
+"https://www.google.com/maps/place/Monument+Office+Park/@-25.8025309,28.225=
+2415,17z/data=3D!3m1!4b1!4m6!3m5!1s0x1e95610015b2fbf5:0x5d1f16f0e9dcdabd!8m=
+2!3d-25.8025309!4d28.2278164!16s%2Fg%2F11z9r0bq8b?entry=3Dttu&amp;g_ep=3DEg=
+oyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"><span style=3D"color:#E75225;text-decor=
+ation:none">Suite</span><span style=3D"color:#E75225;text-decoration:none">
+</span><span style=3D"color:#E75225;text-decoration:none">1-101B</span></a>=
+<br>
+<a href=3D"https://www.google.com/maps/place/Monument+Office+Park/@-25.8025=
+309,28.2252415,17z/data=3D!3m1!4b1!4m6!3m5!1s0x1e95610015b2fbf5:0x5d1f16f0e=
+9dcdabd!8m2!3d-25.8025309!4d28.2278164!16s%2Fg%2F11z9r0bq8b?entry=3Dttu&amp=
+;g_ep=3DEgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"><span style=3D"color:#E75225;=
+text-decoration:none">Monument</span><span style=3D"color:#E75225;text-deco=
+ration:none">
+</span><span style=3D"color:#E75225;text-decoration:none">Office Park</span=
+></a><br>
+<a href=3D"https://www.google.com/maps/place/Monument+Office+Park/@-25.8025=
+309,28.2252415,17z/data=3D!3m1!4b1!4m6!3m5!1s0x1e95610015b2fbf5:0x5d1f16f0e=
+9dcdabd!8m2!3d-25.8025309!4d28.2278164!16s%2Fg%2F11z9r0bq8b?entry=3Dttu&amp=
+;g_ep=3DEgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"><span style=3D"color:#E75225;=
+text-decoration:none">71</span><span style=3D"color:#E75225;text-decoration=
+:none">
+</span><span style=3D"color:#E75225;text-decoration:none">Steenbok Avenue</=
+span></a><br>
+<a href=3D"https://www.google.com/maps/place/Monument+Office+Park/@-25.8025=
+309,28.2252415,17z/data=3D!3m1!4b1!4m6!3m5!1s0x1e95610015b2fbf5:0x5d1f16f0e=
+9dcdabd!8m2!3d-25.8025309!4d28.2278164!16s%2Fg%2F11z9r0bq8b?entry=3Dttu&amp=
+;g_ep=3DEgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"><span style=3D"color:#E75225;=
+text-decoration:none">Pretoria</span></a></span><span style=3D"color:#E7522=
+5;mso-ligatures:none;mso-fareast-language:EN-ZA"><o:p></o:p></span></p>
+</div>
+</td>
+<td valign=3D"top" style=3D"padding:13.5pt 0cm 0cm 15.0pt">
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:9.0pt;font-family:&quot;Ari=
+al&quot;,sans-serif;color:#003646;mso-ligatures:none;mso-fareast-language:E=
+N-ZA"><a href=3D"https://maps.app.goo.gl/KETsZXTRgyr5Z49k8"><b><span style=
+=3D"color:#003646;text-decoration:none">Cape Town Office:</span></b></a></s=
+pan><span style=3D"font-family:&quot;Times New Roman&quot;,serif;color:#003=
+646;mso-ligatures:none;mso-fareast-language:EN-ZA"><br>
+</span><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-se=
+rif;color:#003646;mso-ligatures:none;mso-fareast-language:EN-ZA"><a href=3D=
+"https://maps.app.goo.gl/KETsZXTRgyr5Z49k8"><span style=3D"color:#003646;te=
+xt-decoration:none">Tygervalley Health Centre,</span></a><br>
+<a href=3D"https://maps.app.goo.gl/KETsZXTRgyr5Z49k8"><span style=3D"color:=
+#003646;text-decoration:none">The View, Unit 606, 6th Floor,</span></a><br>
+<a href=3D"https://maps.app.goo.gl/KETsZXTRgyr5Z49k8"><span style=3D"color:=
+#003646;text-decoration:none">Bellville, Cape Town</span></a></span><span s=
+tyle=3D"color:#003646;mso-ligatures:none;mso-fareast-language:EN-ZA"><o:p><=
+/o:p></span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><span style=3D"display:none;mso-ligatures:none;mso-f=
+areast-language:EN-ZA"><o:p>&nbsp;</o:p></span></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"750" style=3D"width:562.5pt">
+<tbody>
+<tr style=3D"height:6.0pt">
+<td style=3D"padding:0cm 0cm 0cm 0cm;height:6.0pt"></td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><span style=3D"display:none;mso-ligatures:none;mso-f=
+areast-language:EN-ZA"><o:p>&nbsp;</o:p></span></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"750" style=3D"width:562.5pt">
+<tbody>
+<tr style=3D"height:3.0pt">
+<td style=3D"background:#00778D;padding:0cm 0cm 0cm 0cm;height:3.0pt"></td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><span style=3D"display:none;mso-ligatures:none;mso-f=
+areast-language:EN-ZA"><o:p>&nbsp;</o:p></span></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"750" style=3D"width:562.5pt">
+<tbody>
+<tr style=3D"height:5.25pt">
+<td style=3D"padding:0cm 0cm 0cm 0cm;height:5.25pt"></td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><span style=3D"display:none;mso-ligatures:none;mso-f=
+areast-language:EN-ZA"><o:p>&nbsp;</o:p></span></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"750" style=3D"width:562.5pt">
+<tbody>
+<tr>
+<td style=3D"padding:0cm 3.75pt 0cm 0cm">
+<p class=3D"MsoNormal"><a href=3D"https://www.linkedin.com/company/vht-atto=
+rneys/"><span style=3D"font-family:&quot;Times New Roman&quot;,serif;color:=
+blue;mso-fareast-language:EN-ZA;text-decoration:none"><img border=3D"0" wid=
+th=3D"26" height=3D"26" style=3D"width:.2708in;height:.2708in" id=3D"_x0000=
+_i1028" src=3D"https://vhtlaw.co.za/wp-content/uploads/2026/03/linkedin.png=
+" alt=3D"linkedin"></span></a><span style=3D"mso-ligatures:none;mso-fareast=
+-language:EN-ZA"><o:p></o:p></span></p>
+</td>
+<td style=3D"padding:0cm 3.75pt 0cm 0cm">
+<p class=3D"MsoNormal"><a href=3D"https://www.facebook.com/VHTLAW"><span st=
+yle=3D"font-family:&quot;Times New Roman&quot;,serif;color:blue;mso-fareast=
+-language:EN-ZA;text-decoration:none"><img border=3D"0" width=3D"26" height=
+=3D"26" style=3D"width:.2708in;height:.2708in" id=3D"_x0000_i1027" src=3D"h=
+ttps://vhtlaw.co.za/wp-content/uploads/2026/03/fb.png" alt=3D"facebook"></s=
+pan></a><span style=3D"mso-ligatures:none;mso-fareast-language:EN-ZA"><o:p>=
+</o:p></span></p>
+</td>
+<td style=3D"padding:0cm 3.75pt 0cm 0cm">
+<p class=3D"MsoNormal"><a href=3D"https://www.instagram.com/vht_law/"><span=
+ style=3D"font-family:&quot;Times New Roman&quot;,serif;color:blue;mso-fare=
+ast-language:EN-ZA;text-decoration:none"><img border=3D"0" width=3D"26" hei=
+ght=3D"26" style=3D"width:.2708in;height:.2708in" id=3D"_x0000_i1026" src=
+=3D"https://vhtlaw.co.za/wp-content/uploads/2026/03/insta.png" alt=3D"insta=
+gram"></span></a><span style=3D"mso-ligatures:none;mso-fareast-language:EN-=
+ZA"><o:p></o:p></span></p>
+</td>
+<td style=3D"padding:0cm 7.5pt 0cm 0cm">
+<p class=3D"MsoNormal"><a href=3D"https://wa.me/+27128803103"><span style=
+=3D"font-family:&quot;Times New Roman&quot;,serif;color:blue;mso-fareast-la=
+nguage:EN-ZA;text-decoration:none"><img border=3D"0" width=3D"26" height=3D=
+"26" style=3D"width:.2708in;height:.2708in" id=3D"_x0000_i1025" src=3D"http=
+s://vhtlaw.co.za/wp-content/uploads/2026/03/whatsapp.png" alt=3D"whatsapp">=
+</span></a><span style=3D"mso-ligatures:none;mso-fareast-language:EN-ZA"><o=
+:p></o:p></span></p>
+</td>
+<td style=3D"padding:0cm 0cm 0cm 0cm"></td>
+<td width=3D"621" valign=3D"top" style=3D"width:465.75pt;padding:3.75pt 0cm=
+ 0cm 0cm">
+<div>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:5.0pt;font-family:&quot;=
+Arial&quot;,sans-serif;color:#B7B7B7;mso-ligatures:none;mso-fareast-languag=
+e:EN-ZA">DISCLAIMER:&nbsp;</span></b><span style=3D"font-size:5.0pt;font-fa=
+mily:&quot;Arial&quot;,sans-serif;color:#B7B7B7;mso-ligatures:none;mso-fare=
+ast-language:EN-ZA">This
+ email and any attachments are confidential and may be legally privileged. =
+If you are not the intended recipient, please notify the sender immediately=
+, delete this email, and do not disclose, copy, or act on its contents. VHT=
+ Attorneys</span><span style=3D"font-size:5.0pt;font-family:&quot;Arial&quo=
+t;,sans-serif;color:#B7B7B7;mso-ligatures:none;mso-fareast-language:EN-ZA">
+</span><span style=3D"font-size:5.0pt;font-family:&quot;Arial&quot;,sans-se=
+rif;color:#B7B7B7;mso-ligatures:none;mso-fareast-language:EN-ZA">accepts no=
+ liability for any loss or damage arising from email transmission or viruse=
+s. The views expressed are those of the sender
+ and not necessarily those of VHT Attorneys.<b>IMPORTANT:&nbsp;</b>VHT Atto=
+rneys will never change banking details via email. Any</span><span style=3D=
+"font-size:5.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#B7B7B7;mso=
+-ligatures:none;mso-fareast-language:EN-ZA">
+</span><span style=3D"font-size:5.0pt;font-family:&quot;Arial&quot;,sans-se=
+rif;color:#B7B7B7;mso-ligatures:none;mso-fareast-language:EN-ZA">notice of =
+amended banking details must be independently verified with our office befo=
+re payment is made.</span><span style=3D"font-size:5.0pt;font-family:&quot;=
+Arial&quot;,sans-serif;color:#B7B7B7;mso-ligatures:none;mso-fareast-languag=
+e:EN-ZA"><o:p></o:p></span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_JN3PPF1A50981CAEECAD70C29F042F13A9DA4B52JN3PPF1A50981CA_--
