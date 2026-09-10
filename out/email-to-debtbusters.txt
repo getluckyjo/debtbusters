@@ -1,142 +1,101 @@
 To:      csu@debtbusters.co.za
-Cc:      admin6@vhtlaw.co.za (Lyndon Bailey | VHT Attorneys)
-Subject: URGENT before 26 October - wf_012447519 - two accounts captured at roughly a tenth
-         of their real balances, and the proposal before the court does not work
+Cc:      admin6@vhtlaw.co.za
+Subject: URGENT before 26 October - wf_012447519 - two accounts captured at a tenth of their real balances
 
 Likho, Lyndon,
 
-I have gone through the savings sheet against my DebtBusters portal and my credit bureau
-report. I believe I have found the root cause of the balance increase I have been asking
-about since 13 July, and it is not interest. Two accounts appear to have been captured at
-roughly a tenth of their actual balances at the start of the process, and the entire
-proposal now before the Wynberg Magistrate's Court is built on those figures.
+I have gone through the savings sheet against my DebtBusters portal and my credit bureau report. I believe I have found the root cause of the balance increase I have been asking about since 13 July, and it is not interest. Two accounts appear to have been captured at roughly a tenth of their actual balances at the start of the process, and the entire proposal now before the Wynberg Magistrate's Court is built on those figures.
 
 This needs to be resolved before 26 October 2026.
 
 1. THE DISCREPANCY SITS IN EXACTLY TWO ACCOUNTS
-Matching your savings sheet to my portal by the negotiated instalment, which is identical
-in both:
 
-  Account                    Savings sheet    Portal today        Move    Instalment
-  FNB Credit Cards             R 22,339.91      R242,993      +R220,653      R  650
-  FNB Personal/Student/Easy    R 31,495.00      R 30,129       -R  1,366     R  800
-  FNB Residual (...081)        R 27,042.34      R293,580      +R266,538      R  750
-  FNB Residual (...073)        R220,676.11      R206,662       -R 14,014     R4,758
-  Wesbank                      R478,578.76      R431,612       -R 46,967     R8,701
-  TOTAL                        R780,132.12      R1,204,976     +R424,844
+Matching your savings sheet to my portal by the negotiated instalment, which is identical in both:
 
-Three accounts are paying down normally. Two have increased by R487,191 between them.
-If this were interest running while we wait for an order, every account would move the
-same way. They do not. Whatever happened, happened on two accounts only.
+- FNB Credit Cards (R650/m): sheet R22,339.91, portal R242,993. UP R220,653.
+- FNB Personal, Student and Easy Plan Loans (R800/m): sheet R31,495.00, portal R30,129. Down R1,366.
+- FNB Residual Accounts ...081 (R750/m): sheet R27,042.34, portal R293,580. UP R266,538.
+- FNB Residual Accounts ...073 (R4,758/m): sheet R220,676.11, portal R206,662. Down R14,014.
+- Wesbank (R8,701/m): sheet R478,578.76, portal R431,612. Down R46,967.
+
+Totals: R780,132.12 on the sheet against R1,204,976 on the portal, an increase of R424,844.
+
+Three accounts are paying down normally. Two have increased by R487,191 between them. If this were interest running while we wait for an order, every account would move the same way. They do not. Whatever happened, happened on two accounts only.
 
 2. THOSE ARE THE SAME TWO ACCOUNTS WHOSE INSTALMENTS NEVER MADE SENSE
+
 On your savings sheet, the "Original Instalment" column against the stated balances:
 
-  FNB Credit Cards       R9,530.00 x 24 = R228,720 against a stated balance of R22,339.91
-  FNB Residual (...081)  R7,410.30 x 24 = R177,847 against a stated balance of R27,042.34
+- FNB Credit Cards: R9,530.00 x 24 months = R228,720, against a stated balance of R22,339.91.
+- FNB Residual ...081: R7,410.30 x 24 months = R177,847, against a stated balance of R27,042.34.
 
-Those instalments are consistent with balances in the low hundreds of thousands, not the
-low tens of thousands. The three accounts where the instalment does fit the balance are
-the three that are behaving normally. The correlation is exact.
+Those instalments are consistent with balances in the low hundreds of thousands, not the low tens of thousands. The three accounts where the instalment does fit the balance are the three that are behaving normally. The correlation is exact.
 
 3. MY CREDIT BUREAU REPORT CONFIRMS IT INDEPENDENTLY
+
 FIRSTRAND BANK LIMITED - FNB CREDIT CARD, account ending 2000, opened 11-05-2023:
-  Account Balance    R244,951
-  Instalment Amount  R244,951
-  Overdue Amount     R244,951
-  Acc Status         Prescription Interrupted Indicator
+- Account Balance: R244,951
+- Instalment Amount: R244,951
+- Overdue Amount: R244,951
+- Acc Status: Prescription Interrupted Indicator
 
-The bureau says R244,951. Your portal says R242,993. Your savings sheet says R22,339.91.
-Two independent sources agree with each other and disagree with the savings sheet by about
-R220,000.
+The bureau says R244,951. Your portal says R242,993. Your savings sheet says R22,339.91. Two independent sources agree with each other and disagree with the savings sheet by about R220,000.
 
-Please also explain why the full balance is reported as overdue, and what the prescription
-interrupted indicator refers to. That is the fourth time I have asked, in substance,
-whether any credit provider has issued or threatened a notice of termination under
-section 86(10).
+Please also explain why the full balance is reported as overdue, and what the prescription interrupted indicator refers to. That is the fourth time I have asked, in substance, whether any credit provider has issued or threatened a notice of termination under section 86(10).
 
 4. THIS IS ALMOST CERTAINLY WHY FNB REJECTED THE PROPOSAL
-FNB was offered R650 a month against a credit card of R242,993, and R750 a month against
-a residual account of R293,580. At the contractual rate of 20.75%, those accounts accrue
-about R4,202 and R5,076 of interest a month. The offers do not cover the interest, let
-alone reduce the capital. No credit provider would accept that. FNB's rejection looks like
-a rational response to figures that were wrong, not obstruction.
+
+FNB was offered R650 a month against a credit card of R242,993, and R750 a month against a residual account of R293,580. At the contractual rate of 20.75%, those accounts accrue about R4,202 and R5,076 of interest a month. The offers do not cover the interest, let alone reduce the capital. No credit provider would accept that. FNB's rejection looks like a rational response to figures that were wrong, not obstruction.
 
 5. THE PROPOSAL NOW BEFORE THE COURT DOES NOT WORK
+
 Applying your own revised rates and revised terms to the real balances:
 
-  Account                  Term   Proposed    Actually needed   Clears in
-  FNB Credit Cards          37m   R  650      R6,692.91         39.0 years
-  FNB Personal/Student      48m   R  800      R  645.27          3.2 years   OK
-  FNB Residual (...081)     39m   R  750      R7,679.20         41.4 years
-  FNB Residual (...073)     50m   R4,758      R4,237.71          3.7 years   OK
-  Wesbank                   73m   R8,701      R7,652.47          5.2 years   OK
-  TOTAL                           R15,659     R26,907.56
+- FNB Credit Cards, 37 month term: R650 proposed, R6,692.91 actually needed. Clears in 39 years.
+- FNB Personal, Student and Easy Plan Loans, 48 month term: R800 proposed, R645.27 needed. Works.
+- FNB Residual ...081, 39 month term: R750 proposed, R7,679.20 actually needed. Clears in 41 years.
+- FNB Residual ...073, 50 month term: R4,758 proposed, R4,237.71 needed. Works.
+- Wesbank, 73 month term: R8,701 proposed, R7,652.47 needed. Works.
 
-The three correctly captured accounts work. The two mis-captured accounts would take
-39 and 41 years against terms of 37 and 39 months. If the Magistrate grants this proposal
-as it stands on 26 October, I will be bound by an order that cannot discharge the debt.
+Proposed total R15,659 a month against R26,907.56 actually required.
+
+The three correctly captured accounts work. The two mis-captured accounts would take 39 and 41 years against terms of 37 and 39 months. If the Magistrate grants this proposal as it stands on 26 October, I will be bound by an order that cannot discharge the debt.
 
 6. I AM LOSING R7,878 A MONTH WHILE THIS SITS
-At contractual rates, the credit card grows by about R3,552 a month and the residual
-account by about R4,326 a month, because the agreed payments do not cover the interest.
-That is R94,539 a year, and it has been running for eight months.
+
+At contractual rates, the credit card grows by about R3,552 a month and the residual account by about R4,326 a month, because the agreed payments do not cover the interest. That is R94,539 a year, and it has been running for eight months.
 
 WHAT I NEED, IN WRITING, BY FRIDAY 18 SEPTEMBER 2026
-  a. The correct balance for every account as at the date of my application in January
-     2026, and as at today, taken from credit provider certificates of balance rather
-     than from your system.
-  b. A full statement per account: every payment Hyphen received from me, what was
-     distributed to each credit provider and when, and the interest and fees each credit
-     provider charged over the same period.
-  c. Confirmation of whether the FNB Credit Cards and FNB Residual (...081) balances on
-     the savings sheet were captured incorrectly. If they were correct at the time,
-     explain how they increased by R487,191 while I paid R17,000 a month.
-  d. A recalculated proposal built on the correct balances, with an honest monthly figure.
-     If servicing the real book needs more than R17,000 a month, tell me now.
-  e. The date the savings sheet was generated. The only date on it is a template stamp,
-     "Updated 04 May 2022".
-  f. A breakdown of the R1,340.38 difference between my R17,000 payment and the R15,659.62
-     of instalments on the sheet - aftercare fee, PDA fee and VAT as separate lines.
-  g. My credit report also shows NEDBANK LTD - NEDBANK MORTGAGE LOANS and FIRSTRAND BANK
-     LIMITED - FNB FUSION, neither of which appears in my debt review. Confirm whether
-     they were deliberately excluded, and on whose instruction.
-  h. Confirmation that Wesbank, the only provider that accepted, has not withdrawn or
-     lapsed its acceptance after eight months.
-  i. One named person accountable for this file, with a direct email address. You have
-     referred me to your Legal Consultants; VHT has told me they do not handle DebtBusters
-     operational queries. I am not going in that circle again.
 
-LYNDON - SPECIFICALLY FOR YOU
-First, please confirm which forum my application is actually in. DebtBusters wrote on
-9 September that "the NCT application has been submitted for a debt restructuring court
-order". You told me on 8 September it is case 4652/2026 in the Wynberg Magistrate's Court,
-next appearing 26 October 2026. Those are different forums, and if FNB is opposing, a
-consent order route is not available.
+a. The correct balance for every account as at the date of my application in January 2026, and as at today, taken from credit provider certificates of balance rather than from your system.
 
-Second, and more urgently: please do not allow 26 October to proceed on these figures. On
-the numbers above the section 87 re-arrangement sought would be incapable of discharging
-two of the five accounts. I would rather ask for a postponement with corrected figures
-than obtain an order I cannot comply with. Please advise on whether the application should
-be amended before the hearing.
+b. A full statement per account: every payment Hyphen received from me, what was distributed to each credit provider and when, and the interest and fees each credit provider charged over the same period.
 
-Third, I must correct something I told you on 8 September. I said I was "self-employed /
-business owner". That was loose wording. I am EMPLOYED by Get Lucky Golf at a salary of
-R100,000 per month. I used "business owner" because I founded the company and hold an
-interest in it, but I am its employee and paid a salary by it. The "EMPLOYED" description
-in the confirmatory affidavit already filed is therefore correct and needs no correction.
+c. Confirmation of whether the FNB Credit Cards and FNB Residual ...081 balances on the savings sheet were captured incorrectly. If they were correct at the time, explain how they increased by R487,191 while I paid R17,000 a month.
 
-The fluctuation the Magistrate picked up has a simple explanation: the company cannot
-always pay my salary in full on the due date, so I am sometimes paid late, in part, or in
-instalments across the month, with the shortfall caught up later. I also do consulting
-work in my own name outside my employment, which is engagement based and irregular. I have
-prepared an affidavit dealing with both. Given that I am employed rather than
-self-employed, please confirm whether you still want it commissioned, and whether the
-wording suits what the court needs.
+d. A recalculated proposal built on the correct balances, with an honest monthly figure. If servicing the real book needs more than R17,000 a month, tell me now.
 
-I am not asking anyone to cut corners, and I am not looking to apportion blame. I am asking
-for the correct numbers, because everything downstream of them is wrong and the court date
-is six weeks away.
+e. The date the savings sheet was generated. The only date on it is a template stamp, "Updated 04 May 2022".
+
+f. A breakdown of the R1,340.38 difference between my R17,000 payment and the R15,659.62 of instalments on the sheet: aftercare fee, PDA fee and VAT as separate lines.
+
+g. My credit report also shows NEDBANK LTD - NEDBANK MORTGAGE LOANS and FIRSTRAND BANK LIMITED - FNB FUSION, neither of which appears in my debt review. Confirm whether they were deliberately excluded, and on whose instruction.
+
+h. Confirmation that Wesbank, the only provider that accepted, has not withdrawn or lapsed its acceptance after eight months.
+
+i. One named person accountable for this file, with a direct email address. You have referred me to your Legal Consultants; VHT has told me they do not handle DebtBusters operational queries. I am not going in that circle again.
+
+LYNDON, SPECIFICALLY FOR YOU
+
+First, please confirm which forum my application is actually in. DebtBusters wrote on 9 September that "the NCT application has been submitted for a debt restructuring court order". You told me on 8 September it is case 4652/2026 in the Wynberg Magistrate's Court, next appearing 26 October 2026. Those are different forums, and if FNB is opposing, a consent order route is not available.
+
+Second, and more urgently: please do not allow 26 October to proceed on these figures. On the numbers above the section 87 re-arrangement sought would be incapable of discharging two of the five accounts. I would rather ask for a postponement with corrected figures than obtain an order I cannot comply with. Please advise on whether the application should be amended before the hearing.
+
+Third, I must correct something I told you on 8 September. I said I was "self-employed / business owner". That was loose wording. I am EMPLOYED by Get Lucky Golf at a salary of R100,000 per month. I used "business owner" because I founded the company and hold an interest in it, but I am its employee and paid a salary by it. The "EMPLOYED" description in the confirmatory affidavit already filed is therefore correct and needs no correction.
+
+The fluctuation the Magistrate picked up has a simple explanation: the company cannot always pay my salary in full on the due date, so I am sometimes paid late, in part, or in instalments across the month, with the shortfall caught up later. I also do consulting work in my own name outside my employment, which is engagement based and irregular. I have prepared an affidavit dealing with both. Given that I am employed rather than self-employed, please confirm whether you still want it commissioned, and whether the wording suits what the court needs.
+
+I am not asking anyone to cut corners, and I am not looking to apportion blame. I am asking for the correct numbers, because everything downstream of them is wrong and the court date is six weeks away.
 
 Best,
 
